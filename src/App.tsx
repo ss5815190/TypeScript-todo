@@ -6,8 +6,7 @@ import Todo from './components/Todo';
 function App() {
 
   return (
-    <div>
-      <h1>Todo List</h1>
+    <div className="flex flex-col w-screen items-center">
       <NewTodo/>
       <Todo/>
     </div>

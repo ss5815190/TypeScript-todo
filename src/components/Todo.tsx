@@ -11,7 +11,7 @@ function Todo() {
         dispatch(todoListAction.deleteTodo(id));
     }
   return (
-    <ul >
+    <ul className="w-8/12 max-w-2xl">
       {todoList.todos.map((item)=>(
         <TodoItem key={item.id} text={item.text} onRemoveTodo={()=>removeHandler(item.id)} />
       ))}
