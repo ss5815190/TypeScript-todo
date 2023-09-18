@@ -20,7 +20,7 @@ function NewTodo() {
     <form className="flex flex-col w-8/12 max-w-2xl my-8" onSubmit={submitHandler}>
       <label className="font-bold mb-2" htmlFor="text">Todo text</label>
       <input className=" bg-orange-200 font text-2xl p-2 border-b-2 border-black mb-2 rounded" type="text" id="text" ref={inputRef}/>
-      <button className=" max-w-max px-6 py-2 bg-orange-300 rounded ">Add todo</button>
+      <button className=" max-w-max px-6 py-2 bg-orange-300 rounded hover:bg-orange-200">Add todo</button>
     </form> 
   )
 };
