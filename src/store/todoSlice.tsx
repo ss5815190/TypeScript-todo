@@ -4,6 +4,7 @@ import { v4 } from 'uuid';
 interface Todo {
     id:string;
     text:string;
+    date:string;
 }
 interface TodosState {
     todos: Todo[];
@@ -16,10 +17,11 @@ const todoSlice = createSlice({
     name:'todoList',
     initialState,
     reducers: {
-        addTodo: (state, action: PayloadAction<string>) => {
+        addTodo: (state, action: PayloadAction<{text:string, date:string}>) => {
           const newTodo: Todo = {
             id: v4(),
-            text: action.payload,
+            text: action.payload.text,
+            date:action.payload.date,
           };
           state.todos.push(newTodo);
         },

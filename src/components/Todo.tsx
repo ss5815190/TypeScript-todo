@@ -13,7 +13,7 @@ function Todo() {
   return (
     <ul className="w-8/12 max-w-2xl">
       {todos.map((item)=>(
-        <TodoItem key={item.id} text={item.text} onRemoveTodo={()=>removeHandler(item.id)} />
+        <TodoItem key={item.id} text={item.text} date={item.date} onRemoveTodo={()=>removeHandler(item.id)} />
       ))}
     </ul>
   )
